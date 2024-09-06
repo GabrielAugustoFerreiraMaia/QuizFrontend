@@ -6,8 +6,8 @@ let timer;
 let baseTime = 10;
 let timeLeft = baseTime;
 let level = 1;
-const maxLevel = 3; // Número máximo de níveis
 let isTimeOut = false; // Para controlar se o tempo acabou
+let answeredQuestions = []; // Armazenar perguntas já respondidas
 
 // Carregar as perguntas do arquivo JSON
 async function loadQuestions() {
@@ -39,8 +39,19 @@ function loadQuestion() {
         optionsList.classList.remove('animate__animated', 'animate__fadeIn');
     }, 1000);
 
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    currentQuestion = questions[randomIndex];
+    // Selecionar uma pergunta que ainda não foi respondida
+    let remainingQuestions = questions.filter(q => !answeredQuestions.includes(q));
+    if (remainingQuestions.length === 0) {
+        alert('Você respondeu todas as perguntas! Parabéns!');
+        endQuiz();
+        return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+    currentQuestion = remainingQuestions[randomIndex];
+
+    // Marcar essa pergunta como respondida
+    answeredQuestions.push(currentQuestion);
 
     questionElement.textContent = currentQuestion.question;
     optionsList.innerHTML = "";
@@ -72,7 +83,7 @@ function checkAnswer() {
         document.getElementById('score').textContent = "Pontuação: " + score;
 
         // Aumenta o nível conforme a pontuação
-        if (score % 3 === 0 && level < maxLevel) {
+        if (score % 3 === 0) {
             level++;
             result.textContent += ` Parabéns! Você avançou para o nível ${level}!`;
             document.getElementById('level').textContent = "Nível: " + level;

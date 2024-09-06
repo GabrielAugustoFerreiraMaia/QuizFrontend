@@ -17,5 +17,90 @@
         "question": "Qual é o maior oceano do mundo?",
         "options": ["Atlântico", "Pacífico", "Índico", "Ártico"],
         "answer": "Pacífico"
+    }, {
+        "question": "Qual é a capital da Itália?",
+        "options": ["Roma", "Milão", "Veneza", "Florença"],
+        "answer": "Roma"
+    },
+    {
+        "question": "Quem pintou a Mona Lisa?",
+        "options": ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"],
+        "answer": "Leonardo da Vinci"
+    },
+    {
+        "question": "Qual é o maior continente do mundo?",
+        "options": ["Ásia", "África", "América do Norte", "Europa"],
+        "answer": "Ásia"
+    },
+    {
+        "question": "Qual é o elemento químico com o símbolo 'O'?",
+        "options": ["Oxigênio", "Ouro", "Ósmio", "Óxido"],
+        "answer": "Oxigênio"
+    }, {
+        "question": "Quem descobriu o Brasil?",
+        "options": ["Cristóvão Colombo", "Pedro Álvares Cabral", "Américo Vespúcio", "Fernão de Magalhães"],
+        "answer": "Pedro Álvares Cabral"
+    },
+    {
+        "question": "Qual foi o primeiro governador-geral do Brasil?",
+        "options": ["Mem de Sá", "D. João III", "Martim Afonso de Sousa", "Afonso de Albuquerque"],
+        "answer": "Mem de Sá"
+    }, {
+        "question": "Qual é a moeda do Japão?",
+        "options": ["Yen", "Dólar", "Euro", "Won"],
+        "answer": "Yen"
+    },
+    {
+        "question": "Quem descobriu a América?",
+        "options": ["Cristóvão Colombo", "Vasco da Gama", "Fernão de Magalhães", "Pedro Álvares Cabral"],
+        "answer": "Cristóvão Colombo"
+    },
+    {
+        "question": "Qual é a montanha mais alta do mundo?",
+        "options": ["K2", "Kangchenjunga", "Monte Everest", "Makalu"],
+        "answer": "Monte Everest"
+    },
+    {
+        "question": "Qual é a língua mais falada do mundo?",
+        "options": ["Inglês", "Mandarim", "Espanhol", "Hindi"],
+        "answer": "Mandarim"
+    }, {
+        "question": "Qual é o maior país do mundo?",
+        "options": ["Rússia", "Canadá", "China", "Estados Unidos"],
+        "answer": "Rússia"
+    },
+    {
+        "question": "Quem foi o primeiro homem a pisar na Lua?",
+        "options": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Michael Collins"],
+        "answer": "Neil Armstrong"
+    },
+    {
+        "question": "Qual é a capital da Espanha?",
+        "options": ["Madrid", "Barcelona", "Sevilha", "Valência"],
+        "answer": "Madrid"
+    },
+    {
+        "question": "Qual é o símbolo químico do carbono?",
+        "options": ["C", "Ca", "Co", "Cu"],
+        "answer": "C"
+    }, {
+        "question": "Qual é o maior animal terrestre?",
+        "options": ["Elefante", "Girafa", "Rinoceronte", "Urso-polar"],
+        "answer": "Elefante"
+    },
+    {
+        "question": "Quem escreveu 'A Ilíada'?",
+        "options": ["Homero", "Virgílio", "Sófocles", "Platão"],
+        "answer": "Homero"
+    },
+    {
+        "question": "Qual é o rio mais longo do mundo?",
+        "options": ["Amazonas", "Nilo", "Yangtze", "Mississipi"],
+        "answer": "Nilo"
+    },
+    {
+        "question": "Qual é a capital da Austrália?",
+        "options": ["Canberra", "Sydney", "Melbourne", "Brisbane"],
+        "answer": "Canberra"
     }
 ]
