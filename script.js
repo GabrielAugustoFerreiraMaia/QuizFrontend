@@ -3,7 +3,8 @@ let currentQuestion = {};
 let userAnswer = "";
 let score = 0;
 let timer;
-let timeLeft = 10;
+let baseTime = 10;
+let timeLeft = baseTime;
 let level = 1;
 const maxLevel = 3; // Número máximo de níveis
 let isTimeOut = false; // Para controlar se o tempo acabou
@@ -21,15 +22,27 @@ async function loadQuestions() {
 
 function loadQuestion() {
     clearInterval(timer);
-    timeLeft = 10;
+    timeLeft = baseTime - (level * 2); // Reduz 2 segundos por nível
+    timeLeft = Math.max(3, timeLeft); // Garantir pelo menos 3 segundos de resposta
     isTimeOut = false; // Reseta a variável de tempo esgotado
     startTimer();
+
+    const questionElement = document.getElementById('question');
+    const optionsList = document.getElementById('options');
+
+    // Adicionar animação ao carregar pergunta
+    questionElement.classList.add('animate__animated', 'animate__fadeIn');
+    optionsList.classList.add('animate__animated', 'animate__fadeIn');
+
+    setTimeout(() => {
+        questionElement.classList.remove('animate__animated', 'animate__fadeIn');
+        optionsList.classList.remove('animate__animated', 'animate__fadeIn');
+    }, 1000);
 
     const randomIndex = Math.floor(Math.random() * questions.length);
     currentQuestion = questions[randomIndex];
 
-    document.getElementById('question').textContent = currentQuestion.question;
-    const optionsList = document.getElementById('options');
+    questionElement.textContent = currentQuestion.question;
     optionsList.innerHTML = "";
 
     currentQuestion.options.forEach(option => {
@@ -90,7 +103,22 @@ function startTimer() {
 function endQuiz() {
     clearInterval(timer); // Para o cronômetro
     alert(`Fim do jogo! Sua pontuação final foi: ${score}`);
-    // Reinicia o quiz, se necessário
+
+    // Armazenar pontuação no localStorage
+    let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    highScores.push(score);
+    highScores.sort((a, b) => b - a); // Ordenar da maior para a menor pontuação
+    highScores = highScores.slice(0, 5); // Manter apenas os 5 melhores
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+
+    // Exibir ranking
+    let ranking = 'Ranking:\n';
+    highScores.forEach((highScore, index) => {
+        ranking += `${index + 1}. ${highScore} pontos\n`;
+    });
+    alert(ranking);
+
     location.reload(); // Recarrega a página para reiniciar o quiz
 }
 
