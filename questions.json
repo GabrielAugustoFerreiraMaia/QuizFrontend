@@ -1,0 +1,21 @@
+[{
+        "question": "Qual é a capital da França?",
+        "options": ["Paris", "Londres", "Berlim", "Madri"],
+        "answer": "Paris"
+    },
+    {
+        "question": "Quem escreveu 'Dom Quixote'?",
+        "options": ["Miguel de Cervantes", "William Shakespeare", "Jorge Luis Borges", "Gabriel García Márquez"],
+        "answer": "Miguel de Cervantes"
+    },
+    {
+        "question": "Qual é o planeta mais próximo do Sol?",
+        "options": ["Mercúrio", "Vênus", "Terra", "Marte"],
+        "answer": "Mercúrio"
+    },
+    {
+        "question": "Qual é o maior oceano do mundo?",
+        "options": ["Atlântico", "Pacífico", "Índico", "Ártico"],
+        "answer": "Pacífico"
+    }
+]
